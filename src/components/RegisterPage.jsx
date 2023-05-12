@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { auth } from '../config/Firebase';
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth"
@@ -69,7 +69,7 @@ const RegisterPage = () => {
                     </div>
                     <div className="mt-6 text-center">
                         Already have an account ?
-                        <a href="#" className="underline">{' Login In Here'}</a>
+                        <Link to={'/login'} className="underline">{' Login In Here'}</Link>
                     </div>
                 </form>
             </div>
